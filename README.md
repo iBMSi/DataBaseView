@@ -23,7 +23,6 @@ Este código SQL cria um banco de dados para gerenciar informações sobre produ
    - Lista os nomes dos produtos com preço superior a 14.
   
    --------------------------------------------------------------------------------------------------------------------------------------------
-   view
 
  CREATE TABLE tabela(
 	id			integer PRIMARY KEY autoincrement,
