@@ -36,7 +36,7 @@ Este código SQL cria um banco de dados para gerenciar informações sobre produ
 	preco		double
 )
 
-DROP TABLE tabela;
+-------------------------------------------------------------------------
 
 INSERT INTO tabela (nome,marca,fornecedor,estoque,preco) VALUES
 ('maionese','helmans', 'helmans ltda', 102,10),
@@ -59,18 +59,23 @@ INSERT INTO tabela (nome,marca,fornecedor,estoque,preco) VALUES
 
 ('refrigerante','pepsi', 'pepsi ltda', 180, 20);
 
+-------------------------------------------------------------------------
 
 CREATE VIEW marcasv as
 SELECT nome, marca FROM tabela;
 
+
 CREATE VIEW nomefornecedor as
 SELECT nome,fornecedor FROM tabela;
+
 
 CREATE VIEW fornecedormarca as
 SELECT fornecedor, marca FROM tabela;
 
+
 CREATE VIEW insuficiente as
 SELECT * FROM tabela WHERE estoque > estoque_min;
+
 
 ALTER TABLE tabela ADD data_val	date;
 INSERT INTO tabela (nome,marca, fornecedor, estoque, data_val,preco) VALUES
@@ -93,6 +98,7 @@ INSERT INTO tabela (nome,marca, fornecedor, estoque, data_val,preco) VALUES
 ('macarrão', 'barilla', 'barilla ltda', 105, '2024-09-05', 9),
 
 ('bolacha','oreo', 'oreo ltda', 160, '2024-10-10',2);
+
 
 
 CREATE VIEW vencidos as
